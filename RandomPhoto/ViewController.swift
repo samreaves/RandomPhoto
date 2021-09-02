@@ -23,6 +23,18 @@ class ViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         return button
     }()
+    
+    private let colors: [UIColor] = [
+        .systemRed,
+        .systemBlue,
+        .systemPink,
+        .systemTeal,
+        .systemGreen,
+        .systemYellow,
+        .systemOrange,
+        .systemIndigo,
+        .systemPurple
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +52,8 @@ class ViewController: UIViewController {
     
     @objc func didTapButton() {
         getRandomPhoto()
+        
+        view.backgroundColor = colors.randomElement()
     }
     
     override func viewDidLayoutSubviews() {
